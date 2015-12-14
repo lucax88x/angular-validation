@@ -328,7 +328,6 @@ scope.validationInvalidHandler = function(message){
 
 
 ### **Setup a global valid/invalid/reset callback in config phase**
-<a name="custom-function-huei"></a>
 
 ```javascript
 // your module
@@ -347,3 +346,11 @@ angular.module('yourApp', ['validation'])
 ```
 
 
+### **Add validation on Enter**
+
+```html
+<form name="Form">
+    <input type="text" name="text" ng-model="form.text" validator="required"/>
+    <button validation-submit="Form" validation-on-enter="Form" ng-click="form.submit()"></button>
+</form>
+```
